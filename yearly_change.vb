@@ -65,7 +65,7 @@ Sub yearly_change():
         cond3.Interior.Color = vbRed
         cond3.Font.Color = vbWhite
         
-        
+    Next ws     
         
 
         
