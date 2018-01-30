@@ -53,7 +53,7 @@ Sub yearly_change():
 
         With cond1
             .Interior.Color = vbGreen
-            .Font.Color = vbWhite
+            .Font.Color = vbBlack
         End With
     
         ' the above waying of setting up the conditionals is the same as b
