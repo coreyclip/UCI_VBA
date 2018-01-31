@@ -20,7 +20,7 @@ Sub percent_change():
 
             chg = yr / opn 
 
-            cells(i,9).value = chg 
+            cells(i,11).value = chg 
         next i 
     next ws 
 

@@ -1,35 +1,10 @@
-Sub yearly_change():
-    ' loop through each worksheet in Worksheets
-    For Each ws in Worksheets
-        ' calculate out the Yearly change from what the stock opened
-        ' the year at to what the closing price was.
-        ' create a last row variable
-        With ActiveSheet
-            LastRow = .Cells(.Rows.Count, 2).End(xlUp).row
-        End With
-
-        ' Set column 8 header to be "yearly change"
-        Cells(1, 8) = "yearly change"
+'Add formatting
+        ' FormatConditions.Add(xlCellValue, xlGreater, Formula1, Formula2)
         
-        For i = 2 To LastRow
-            ' create a variable for opening price
-            Dim opn As Double
-            ' create a variable for closing price
-            Dim cls As Double
-            ' create a varialbe for change
-            Dim chg As Double
-            
-            opn = Cells(i, 3).Value
-            cls = Cells(i, 6).Value
-            
-            chg = cls - opn
-            'Add formatting
-            ' FormatConditions.Add(xlCellValue, xlGreater, Formula1, Formula2)
-            
-            Cells(i, 10).Value = chg
-            ' perform conditional formatting regarding weather the change is positive or negative
-            Next i
-            'set up rg as a range, this is a variable to hold our column that will have conditional formating applied to it
+        Cells(i, 10).Value = chg
+        ' perform conditional formatting regarding weather the change is positive or negative
+           
+        'set up rg as a range, this is a variable to hold our column that will have conditional formating applied to it
         Dim rg As Range
             
         ' we will create three conditional formats, cond1 for greater than 0 aka growth, cond2 for less than 0 aka contraction
@@ -64,12 +39,4 @@ Sub yearly_change():
         
         cond3.Interior.Color = vbRed
         cond3.Font.Color = vbWhite
-        
-    Next ws     
-        
-
-        
         ' for reference check: http://www.bluepecantraining.com/portfolio/excel-vba-macro-to-apply-conditional-formatting-based-on-value/#ixzz55e5Mijym
-
-
-End Sub
