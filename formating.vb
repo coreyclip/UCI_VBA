@@ -13,7 +13,7 @@
         Dim cond1 As FormatCondition, cond2 As FormatCondition, cond3 As FormatCondition
         
         ' set rg to be our yearly change column
-        Set rg = Range("H2", Range("H2").End(xlDown))
+        Set rg = Range("J2", Range("J2").End(xlDown))
 
         'clear any existing conditional formatting, note that in vba we can access elements of an object in a manner similar to python
         rg.FormatConditions.Delete
