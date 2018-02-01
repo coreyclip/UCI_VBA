@@ -46,10 +46,13 @@ Sub Summarize():
                 cls = ws.Cells(i, 6).Value
                 ' create a variable for change
                 Dim chg As Double
-
                 chg = opn - cls 
                 'calculate percent change
-                percent_change = chg / opn
+                if (chg <> 0) Then 
+                    percent_change = chg / opn 
+                else
+                    percent_change = 0
+                end if 
                 'set new position of opening price
                 'MsgBox(i)
                 row_break = row_break + i 
