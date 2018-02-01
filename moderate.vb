@@ -16,10 +16,10 @@ Sub Summarize():
     ' loop through each worksheet in Worksheets
     For Each ws In Worksheets
         ' create a last row variable
-        MsgBox(ws.name)
+        'MsgBox(ws.name)
         
         LastRow = ws.Cells(ws.Rows.Count, 2).End(xlUp).Row
-        MsgBox(LastRow)
+        'MsgBox(LastRow)
         'create holder for total volume
         Dim total As Double
         total = 0
@@ -41,7 +41,7 @@ Sub Summarize():
             'check and see if the next row in the ticker column is the same
             'as the previous ticker
             If ws.Cells(i, 1).Value <> ws.Cells(i + 1, 1).Value Then
-                MsgBox("New Ticker "& ws.Cells(i + 1, 1).Value )
+               ' MsgBox("New Ticker "& ws.Cells(i + 1, 1).Value )
                 'collect closing price 
                 cls = ws.Cells(i, 6).Value
                 ' create a variable for change
@@ -69,7 +69,7 @@ Sub Summarize():
                     .Range("I" & nextrow + 1) = ticker
                     .Range("J" & nextrow + 1) = chg
                     .Range("K" & nextrow + 1) = percent_change
-                    .Range("J" & nextrow + 1) = total
+                    .Range("L" & nextrow + 1) = total
                 End With
                 ' set total back to zero 
                 total = 0
