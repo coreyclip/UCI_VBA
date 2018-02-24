@@ -1,4 +1,4 @@
-# UCI_VBA
+# VBA Box
 Contains VBA Scripts for completion of UC Irvine's Data Analytics Course VBA section.
 
 # StockAnalysis.vb 
