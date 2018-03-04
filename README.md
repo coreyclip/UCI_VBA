@@ -1,5 +1,5 @@
 # VBA Box
-Contains VBA Scripts for completion of UC Irvine's Data Analytics Course VBA section.
+
 
 # StockAnalysis.vb 
 Script operates on excel sheet where each row contains a day's activity for a stock and each sheet contain an entire year's data for multiple stock tickers. Script works by looping through the rows and tabulating each day's stock volume of stock trades and breaking to make a report when the stock ticker's name of the next row doesn't equal the current stock ticker. It's assumed then one ticker's entire year of stock information has been looped through. We then grab the opening price of the first day and compare it to closing price of the last day to get the price change over that sheet's year. The stock ticker and yearly change is inputted into the right side of the worksheet and yearly change is also given as percentage change. 
